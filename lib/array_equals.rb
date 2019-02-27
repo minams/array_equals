@@ -1,13 +1,13 @@
 # Determines if the two input arrays have the same count of elements
 # and the same integer values in the same exact order
-def array_equals(array_a, array_b)
-    if (array_a == [] && array_b == [] || array_a == nil && array_b == nil)
+def array_equals(array1, array2)
+    if (array1 == [] && array2 == [] || array1 == nil && array2 == nil)
       return true
-    elsif array_a == nil || array_b == nil || array_a.length != array_b.length
+    elsif array1 == nil || array2 == nil || array1.length != array2.length
       return false
     else
-      array_a.length.times do |item|
-        if array_b[item] != array_a[item]
+      array1.length.times do |item|
+        if array2[item] != array1[item]
           return false
         end
       end
